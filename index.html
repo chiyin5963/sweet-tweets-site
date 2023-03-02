@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sweet Tweets</title>
+  <link rel="stylesheet" href="build/style.css">
+  <!-- jQUery CDN -->
+  <script
+    src="https://code.jquery.com/jquery-3.6.3.min.js"
+    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+    crossorigin="anonymous">
+  </script>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla&family=Lobster&family=Source+Code+Pro&family=Zilla+Slab&display=swap" rel="stylesheet">
+  <!-- Favicon CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body class="min-h-screen bg-[#F8F4E1] flex flex-col items-center font-zilla-slab">
+  <header class="p-4 mx-auto text-center">
+    <p class="font-lobster text-5xl">Sweet Tweets API</p>
+    <p class="mt-2">A free REST API for strange, out of context, and <s>maybe</s> amusing quotes</p>
+  </header>
+  <hr class="bg-gray-300 h-px w-96 mx-auto mb-4">
+  <main class="max-w-4xl sm:w-2/3 w-4/5">
+    <section id="response-block" class="bg-[#303F4E] rounded-lg w-full p-6">
+      <p id="response" class="text-gray-50 font-source-code-pro sm:overflow-auto overflow-hidden">
+        {<br/>
+        &emsp;"message": <span id="message"></span><br/>
+        &emsp;"author": <span id="author"></span><br/>
+        }
+      </p>
+    </section>
+    <section id="radio-block" class="mt-3 flex flex-row">
+      <p class="mr-5">Response Type: </p>
+      <div>
+        <input type="radio" id="json-radio" name="format" value="json">
+        <label for="json" class="mr-1">JSON</label>
+        <input type="radio" id="text-radio" name="format" value="text">
+        <label for="text">Text</label>  
+      </div>
+    </section>
+    <section id="url-block" class="flex flex-col mt-2">
+      <div>
+        <p class="text-[1.75rem]">GET: <span id="url" class="text-[1rem]"></span></p>
+      </div>
+      <button id="get-button" class="bg-[#303F4E] rounded-md py-2 px-4 sm:w-1/5 w-max text-gray-50 mt-2">Get a Tweet</button>
+    </section>
+  </main>
+  <hr class="bg-gray-300 h-px w-96 mx-auto mb-4 mt-4">
+  <footer class="flex flex-col items-center">
+    <p class="">
+      <span class="fa fa-github"></span>&ensp;
+      <a class="underline" href="https://github.com/chiyin5963/sweet-tweets-api">API</a>&ensp;
+      <a class="underline" href="https://github.com/chiyin5963/sweet-tweets-site">Site</a>
+    </p>
+    <p>© 2023 Tristin Wong</p>
+  </footer>
+  <script type="text/javascript" src="main.js"></script>
+</body>
+</html>
